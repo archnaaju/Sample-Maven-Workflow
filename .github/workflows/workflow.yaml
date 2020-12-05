@@ -10,7 +10,7 @@ env:
   #################################################
   #################################################
   ### REPLACE USERNAME WITH GH USERNAME         ###
-  AZURE_WEBAPP_NAME: archnaaju-demoservice-app
+  AZURE_WEBAPP_NAME: archnaaju-ttt-app
   #################################################
     
 jobs:
