@@ -12,6 +12,9 @@ env:
   ### REPLACE USERNAME WITH GH USERNAME         ###
   AZURE_WEBAPP_NAME: demoservice
   #################################################
+  AZURE_RESOURCE_GROUP: cd-with-actions
+  AZURE_APP_PLAN: actions-demo-deployment
+  AZURE_LOCATION: '"Central US"'
     
 jobs:
   build:
