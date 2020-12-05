@@ -18,3 +18,11 @@ jobs:
         with:
           name: demoservice-0.0.1-SNAPSHOT.jar
           path: target/
+      - name: Build container image
+      - uses: docker/build-push-action@v1
+        with:
+         username: ${{github.actor}}
+         password: ${{secrets.GITHUB_TOKEN}}
+         registry: docker.pkg.github.com
+         repository: archnaaju/Sample-Maven-Workflow/demoservice
+         tag_with_sha: true
