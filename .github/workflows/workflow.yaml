@@ -19,7 +19,7 @@ jobs:
           name: demoservice-0.0.1-SNAPSHOT.jar
           path: target/
       - name: Build container image
-      - uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v1
         with:
          username: ${{github.actor}}
          password: ${{secrets.GITHUB_TOKEN}}
