@@ -16,6 +16,9 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<sonar.projectKey>archnaaju_sample-maven-workflow</sonar.projectKey>
+                <sonar.organization>archnaaju</sonar.organization>
+                <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 
 	<dependencies>
