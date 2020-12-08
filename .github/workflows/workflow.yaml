@@ -40,6 +40,10 @@ jobs:
          registry: docker.pkg.github.com
          repository: archnaaju/sample-maven-workflow/demoservice
          tag_with_sha: true
+      - name: Build container image
+        uses: azure/container-scan@v0
+        with:
+          image-name: ${{env.IMAGE_REGISTRY_URL}}/${{ github.repository }}/${{env.DOCKER_IMAGE_NAME}}:${{ github.sha }}
          
   setup-up-azure-resources:
     runs-on: ubuntu-latest
