@@ -40,7 +40,7 @@ jobs:
          registry: docker.pkg.github.com
          repository: archnaaju/sample-maven-workflow/demoservice
          tag_with_sha: true
-  scan:
+  scans:
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -70,7 +70,7 @@ jobs:
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
   setup-up-azure-resources:
     runs-on: ubuntu-latest
-    needs: scan
+    needs: scans
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
